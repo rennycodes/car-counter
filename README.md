@@ -54,6 +54,7 @@ Adjust the following parameters in the script as needed:
 - `lineUp` and `lineDown`: Define the lines for counting vehicles in the video.
 - `mask`: Set the mask image for region of interest.
 
+
 ## 📹 Output
 The processed video will be saved as `carcounter.mp4` in the same directory.
 
