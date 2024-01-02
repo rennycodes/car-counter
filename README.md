@@ -42,7 +42,7 @@ Make sure you have the following dependencies installed:
     ```bash
     pip install -r requirements.txt
     ```
-    
+
 3. **Download the YOLO weights file `yolov8l.pt` and place it in the yolo weights directory.**
 
 
@@ -50,6 +50,7 @@ Make sure you have the following dependencies installed:
     ```bash
     python car_counter.py
     ```
+    
 ## ⚙️ Configuration
 Adjust the following parameters in the script as needed:  
 - `lineUp` and `lineDown`: Define the lines for counting vehicles in the video.
