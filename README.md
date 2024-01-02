@@ -42,7 +42,7 @@ Make sure you have the following dependencies installed:
     ```bash
     pip install -r requirements.txt
     ```
-3. **Download the YOLO weights file `yolov8l.pt` and place it in the yolo weights directory.**x
+3. **Download the YOLO weights file `yolov8l.pt` and place it in the yolo weights directory.**
 
 
 4. **Run the script:**
