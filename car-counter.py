@@ -63,4 +63,14 @@ while True:
             # Confidence
             conf = math.floor(box.conf[0]*100)/100
 
+            # Classnames
+            cls = int(box.cls[0])
+            vehicleNames = classNames[cls]
+
+            # Selecting the type of vehicle we want to detect
+            if vehicleNames == 'car' or vehicleNames == 'bus' or vehicleNames == 'truck'\
+                or vehicleNames == 'motorbike' and conf >= 0.3:
+                currentDetection = np.array([x1, y1, x2, y2, conf])
+                detections = np.vstack((detections, currentDetection))
+
 
