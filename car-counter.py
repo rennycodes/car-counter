@@ -86,3 +86,9 @@ while True:
         x1, y1, x2, y2, id = int(x1), int(y1), int(x2), int(y2), int(id)
         w, h = (x2-x1), (y2-y1)
 
+        # Tracker cycle
+        cx, cy = (x1+w//2), (y1+h//2)
+        cv.circle(frame, (cx, cy), 5, (255, 0, 255), cv.FILLED)
+
+
+
