@@ -117,7 +117,13 @@ while True:
     cv.putText(frame, str(len(countUp)), (600, 85), cv.FONT_HERSHEY_PLAIN, 5, (200, 50, 200), thickness=7)
     cv.putText(frame, str(len(countDown)), (850, 85), cv.FONT_HERSHEY_PLAIN, 5, (200, 50, 200), thickness=7)
 
+    # Displaying the output result
     cv.imshow('vid', frame)
+
+    # Writing out the frame
+    videoWriter.write(frame)
+    cv.waitKey(1)
+
 
 
 
