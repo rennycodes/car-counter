@@ -108,8 +108,17 @@ while True:
             if countDown.count(id) == 0:
                 countDown.append(id)
 
+        # Displaying ID and bounding boxes
         cvzone.cornerRect(frame, (x1, y1, w, h), l=5, colorR = (255, 0, 255), rt = 1)
         cvzone.putTextRect(frame, f'{id}', (x1, y1), scale = 1, thickness = 2)
+
+    # Displaying graphics texts(count)
+    cv.putText(frame, str(len(totalCount)), (225, 100), cv.FONT_HERSHEY_PLAIN, 5, (200, 50, 200), thickness=7)
+    cv.putText(frame, str(len(countUp)), (600, 85), cv.FONT_HERSHEY_PLAIN, 5, (200, 50, 200), thickness=7)
+    cv.putText(frame, str(len(countDown)), (850, 85), cv.FONT_HERSHEY_PLAIN, 5, (200, 50, 200), thickness=7)
+
+    cv.imshow('vid', frame)
+
 
 
 
