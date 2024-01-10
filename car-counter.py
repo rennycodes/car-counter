@@ -86,9 +86,20 @@ while True:
         x1, y1, x2, y2, id = int(x1), int(y1), int(x2), int(y2), int(id)
         w, h = (x2-x1), (y2-y1)
 
-        # Tracker cycle
+        # Tracker circle
         cx, cy = (x1+w//2), (y1+h//2)
         cv.circle(frame, (cx, cy), 5, (255, 0, 255), cv.FILLED)
+
+        # Right side tracking code
+        if lineUp[0] < cx < lineUp[2] and lineUp[1] - 5 < cy < lineUp[3] + 5:
+            if totalCount.count(id) == 0:
+                totalCount.append(id)
+                cv.line(frame, (lineUp[0], lineUp[1]), (lineUp[2], lineUp[3]), (0, 255, 0), thickness = 3)
+
+            if countUp.count(id) == 0:
+                countUp.append(id)
+
+
 
 
 
