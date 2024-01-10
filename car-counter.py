@@ -73,4 +73,16 @@ while True:
                 currentDetection = np.array([x1, y1, x2, y2, conf])
                 detections = np.vstack((detections, currentDetection))
 
+    # Tracking codes
+    trackerUpdate = tracker.update(detections)
+
+    # Tracking lines
+    cv.line(frame, (lineUp[0], lineUp[1]), (lineUp[2], lineUp[3]), (0, 0, 255), thickness = 3)
+    cv.line(frame, (lineDown[0], lineDown[1]), (lineDown[2], lineDown[3]), (0, 0, 255), thickness = 3)
+
+    for update in trackerUpdate:
+        # Tracker bounding boxes and ID
+        x1, y1, x2, y2, id = update
+        x1, y1, x2, y2, id = int(x1), int(y1), int(x2), int(y2), int(id)
+        w, h = (x2-x1), (y2-y1)
 
