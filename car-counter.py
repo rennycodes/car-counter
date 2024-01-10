@@ -49,3 +49,15 @@ while True:
     frameGraphics1 = cv.imread('assets/graphics1.png', cv.IMREAD_UNCHANGED)
     frame = cvzone.overlayPNG(frame, frameGraphics1, (420, 0))
 
+    detections = np.empty((0, 5))
+
+    # Working on the model result
+    for r in result:
+        boxes = r.boxes
+        for box in boxes:
+            # Bounding boxes
+            x1, y1, x2, y2 = box.xyxy[0]
+            x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+            w, h = (x2-x1), (y2-y1)
+
+
