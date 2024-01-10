@@ -99,6 +99,14 @@ while True:
             if countUp.count(id) == 0:
                 countUp.append(id)
 
+        # Left side tracking code
+        if lineDown[0] < cx < lineDown[2] and lineDown[1] - 15 < cy < lineDown[3] + 15:
+            if totalCount.count(id) == 0:
+                totalCount.append(id)
+                cv.line(frame, (lineDown[0], lineDown[1]), (lineDown[2], lineDown[3]), (0, 255, 0), thickness = 3)
+
+            if countDown.count(id) == 0:
+                countDown.append(id)
 
 
 
