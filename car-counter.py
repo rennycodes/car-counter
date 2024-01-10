@@ -124,9 +124,9 @@ while True:
     videoWriter.write(frame)
     cv.waitKey(1)
 
-
-
-
-
+# Closing down everything
+vid.release()
+cv.destroyAllWindows()
+videoWriter.release()
 
 
