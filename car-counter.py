@@ -108,6 +108,10 @@ while True:
             if countDown.count(id) == 0:
                 countDown.append(id)
 
+        cvzone.cornerRect(frame, (x1, y1, w, h), l=5, colorR = (255, 0, 255), rt = 1)
+        cvzone.putTextRect(frame, f'{id}', (x1, y1), scale = 1, thickness = 2)
+
+
 
 
 
