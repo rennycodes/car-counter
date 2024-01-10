@@ -33,4 +33,19 @@ height = int(vid.get(cv.CAP_PROP_FRAME_HEIGHT))
 fps = vid.get(cv.CAP_PROP_FPS)
 
 # Writing the video writer
-video_writer = cv.VideoWriter(('carcounter.mp4'), cv.VideoWriter_fourcc('m', 'p', '4', 'v'), fps, (width, height))
+videoWriter = cv.VideoWriter(('carcounter.mp4'), cv.VideoWriter_fourcc('m', 'p', '4', 'v'), fps, (width, height))
+
+# Working on the video, model
+while True:
+    ref, frame = vid.read()
+    frameRegion = cv.bitwise_and(frame, mask)
+    result = model(frameRegion, stream = True)
+
+    # Total count graphics
+    frameGraphics = cv.imread('assets/graphics.png', cv.IMREAD_UNCHANGED)
+    frame = cvzone.overlayPNG(frame, frameGraphics, (0,0))
+
+    # Vehicle count graphics
+    frameGraphics1 = cv.imread('assets/graphics1.png', cv.IMREAD_UNCHANGED)
+    frame = cvzone.overlayPNG(frame, frameGraphics1, (420, 0))
+
