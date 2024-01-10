@@ -8,7 +8,7 @@ from sort import *
 # Variables
 model = YOLO('../..yolo weights/yolov8l.pt')
 vid = cv.VideoCapture('assets/cars.mp4')
-class_names = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat",
+classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat",
               "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat",
               "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella",
               "handbag", "tie", "suitcase", "frisbee", "skis", "snowboard", "sports ball", "kite", "baseball bat",
@@ -20,10 +20,17 @@ class_names = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "tra
               "teddy bear", "hair drier", "toothbrush"]
 
 tracker = Sort(max_age = 22, min_hits = 3, iou_threshold = 0.3)
-line_up = [180, 410, 640, 410]
-line_down = [680, 400, 1280, 450]
-count_up = []
-count_down = []
-total_count = []
+lineUp = [180, 410, 640, 410]
+lineDown = [680, 400, 1280, 450]
+countUp = []
+countDown = []
+totalCount = []
 mask = cv.imread('assets/mask.png')
 
+# Setting up video writer properties
+width = int(vid.get(cv.CAP_PROP_FRAME_WIDTH))
+height = int(vid.get(cv.CAP_PROP_FRAME_HEIGHT))
+fps = vid.get(cv.CAP_PROP_FPS)
+
+# Writing the video writer
+video_writer = cv.VideoWriter(('carcounter.mp4'), cv.VideoWriter_fourcc('m', 'p', '4', 'v'), fps, (width, height))
