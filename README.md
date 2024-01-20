@@ -1,12 +1,12 @@
-# Car Counter
+# 🚗 Car Counter
 
 Effortlessly count cars in videos using YOLOv8-powered computer vision program for streamlined traffic monitoring.
 
-## Overview
+## 🌐 Overview
 
 This Python script uses computer vision techniques to count vehicles in a given video. The implementation is based on the YOLO (You Only Look Once) object detection model, integrated with a SORT (Simple Online and Realtime Tracking) algorithm for tracking.
 
-## Features
+##  🚀 Features
 
 - **Object Detection:** Utilizes the YOLO model to detect vehicles in the video.
 
@@ -17,7 +17,7 @@ This Python script uses computer vision techniques to count vehicles in a given 
 - **Visualization:** Displays the output with graphical overlays indicating the total count and count in specific directions.
 
 
-## Prerequisites
+## 🛠️ Prerequisites
 
 Make sure you have the following dependencies installed:
 
@@ -29,7 +29,7 @@ Make sure you have the following dependencies installed:
 
 - SORT (Simple Online and Realtime Tracking)
 
-## Setup
+## 🏗️ Setup
 
 1. **Clone the repository:**
 
@@ -49,14 +49,14 @@ Make sure you have the following dependencies installed:
     ```bash
     python car_counter.py
     ```
-## Configuration
+## ⚙️ Configuration
 Adjust the following parameters in the script as needed:  
 - `lineUp` and `lineDown`: Define the lines for counting vehicles in the video.
 - `mask`: Set the mask image for region of interest.
 
-## Output
+## 📹 Output
 The processed video will be saved as `carcounter.mp4` in the same directory.
 
-## Acknowledgments
+##  🙌 Acknowledgments
 - [Ultralytics YOLO](https://github.com/ultralytics/yolov5)
 - SORT
