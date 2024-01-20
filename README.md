@@ -26,3 +26,12 @@ Make sure you have the following dependencies installed:
 - cvzone
 
 - SORT (Simple Online and Realtime Tracking)
+
+## Setup
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/rennycodes/car-counter.git
+   cd car-counter
+   ```
