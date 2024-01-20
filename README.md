@@ -9,3 +9,7 @@ This Python script uses computer vision techniques to count vehicles in a given 
 - **Object Detection:** Utilizes the YOLO model to detect vehicles in the video.
 
 - **Tracking:** Implements the SORT algorithm for real-time tracking of detected vehicles.
+
+- **Counting:** Tracks and counts vehicles crossing predefined lines in the video.
+
+- **Visualization:** Displays the output with graphical overlays indicating the total count and count in specific directions.
