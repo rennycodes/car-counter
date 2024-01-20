@@ -41,3 +41,9 @@ Make sure you have the following dependencies installed:
     pip install -r requirements.txt
     ```
 3. **Download the YOLO weights file `yolov8l.pt` and place it in the yolo weights directory.**
+
+
+4. **Run the script:**
+    ```bash
+    python car_counter.py
+    ```
