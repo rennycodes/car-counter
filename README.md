@@ -35,3 +35,8 @@ Make sure you have the following dependencies installed:
    git clone https://github.com/rennycodes/car-counter.git
    cd car-counter
    ```
+
+2. **Install the required packages:**
+    ```bash
+    pip install -r requirements.txt
+    ```
