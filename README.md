@@ -13,3 +13,12 @@ This Python script uses computer vision techniques to count vehicles in a given 
 - **Counting:** Tracks and counts vehicles crossing predefined lines in the video.
 
 - **Visualization:** Displays the output with graphical overlays indicating the total count and count in specific directions.
+
+
+## Prerequisites
+
+Make sure you have the following dependencies installed:
+
+- [Ultralytics YOLO](https://github.com/ultralytics/yolov5)
+
+- OpenCV (`cv2`)
