@@ -25,9 +25,9 @@ Make sure you have the following dependencies installed:
 
 - OpenCV (`cv2`)
 
-- cvzone
+- `cvzone`
 
-- SORT (Simple Online and Realtime Tracking)
+- `SORT` (Simple Online and Realtime Tracking)
 
 ## 🏗️ Setup
 
