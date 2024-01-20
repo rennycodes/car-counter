@@ -22,3 +22,7 @@ Make sure you have the following dependencies installed:
 - [Ultralytics YOLO](https://github.com/ultralytics/yolov5)
 
 - OpenCV (`cv2`)
+
+- cvzone
+
+- SORT (Simple Online and Realtime Tracking)
