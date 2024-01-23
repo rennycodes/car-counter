@@ -29,7 +29,7 @@ Make sure you have the following dependencies installed:
 
 - `SORT` (Simple Online and Realtime Tracking)
 
-##  Setup
+## 🏗️ Setup
 
 1. **Clone the repository:**
 
