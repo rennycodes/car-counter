@@ -60,3 +60,4 @@ The processed video will be saved as `carcounter.mp4` in the same directory.
 ## 🙌  Acknowledgments
 - [Ultralytics YOLO](https://github.com/ultralytics/yolov5)
 - SORT
+  I believe we all love cars
